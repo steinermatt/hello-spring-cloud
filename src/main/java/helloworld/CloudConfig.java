@@ -10,9 +10,11 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 @ServiceScan
 @Profile("cloud")
-public class CloudConfig extends AbstractCloudConfig {
-    @Bean
-    public ApplicationInstanceInfo applicationInfo() {
-        return cloud().getApplicationInstanceInfo();
-    }
+public class CloudConfig extends AbstractCloudConfig
+{
+	@Bean()
+	public ApplicationInstanceInfo applicationInfo()
+	{
+		return cloud().getApplicationInstanceInfo();
+	}
 }
